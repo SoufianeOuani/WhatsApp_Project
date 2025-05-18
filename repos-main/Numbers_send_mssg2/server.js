@@ -183,8 +183,14 @@ app.post('/start-session', upload.single('file'), async (req, res) => {
     res.status(500).json({ error: 'Erreur serveur' });
   }
 });
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`✅ Serveur lancé sur le port ${PORT}`);
+// const PORT = process.env.PORT || 8080;
+// app.listen(PORT, '0.0.0.0', () => {
+//   console.log(`✅ Serveur lancé sur le port ${PORT}`);
+// });
+// gha nbdel hada temporary
+// l hada : 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Serveur lancé sur http://localhost:${PORT}`);
 });
 
